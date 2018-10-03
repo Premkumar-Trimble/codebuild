@@ -4,7 +4,7 @@
     "containerDefinitions": [
       {
         "name": "prem",
-        "image": "466749146115.dkr.ecr.ap-south-1.amazonaws.com/prem:6a57b99",
+        "image": "466749146115.dkr.ecr.ap-south-1.amazonaws.com/prem:0.0.1",
         "cpu": 100,
         "portMappings": [
           {
