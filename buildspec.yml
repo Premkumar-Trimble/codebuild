@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t prem .
-      - docker tag prem:latest 466749146115.dkr.ecr.ap-south-1.amazonaws.com/prem:latest
+      - docker build -t codebuild-repo .
+      - docker tag codebuild-repo:latest 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 466749146115.dkr.ecr.ap-south-1.amazonaws.com/prem:latest
+      - docker push 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:latest
