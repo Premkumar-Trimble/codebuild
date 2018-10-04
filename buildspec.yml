@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t codebuild-repo .
+      - docker build -t codebuild-repo:latest .
       - docker tag codebuild-repo:latest 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:latest
   post_build:
     commands:
