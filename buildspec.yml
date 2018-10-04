@@ -13,8 +13,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t $REPOSITORY_URI:latest .
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker build -t codebuild-repo .
+      - docker tag codebuild-repo:latest 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:latest
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
