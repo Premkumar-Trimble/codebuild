@@ -14,11 +14,11 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t codebuild-repo .
-      - docker tag codebuild-repo:latest 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:latest
+      - docker tag codebuild-repo:latest 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:0.0.1
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:latest
+      - docker push 466749146115.dkr.ecr.ap-south-1.amazonaws.com/codebuild-repo:0.0.1
       - echo Writing image definitions file...
       - printf '[{"name":"codebuild-docker","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
